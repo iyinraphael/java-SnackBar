@@ -5,7 +5,7 @@ public class Snack
 {
 
 //Mark: - Fields 
-	private static maxId = 0;
+	private static int maxId = 0;
 	private int id;
 	private String name;
 	private int quantity;
@@ -17,8 +17,8 @@ public class Snack
 		id = maxId;
 		this.name = name;
 		this.quantity = quantity;
-		this.cost = cost
-		this.vendingMachineId = vendingMachineId
+		this.cost = cost;
+		this.vendingMachineId = vendingMachineId;
 	}
 
 //Mark: - Getters and Settes methods
@@ -54,10 +54,18 @@ public class Snack
 		this.vendingMachineId = vendingMachineId;
 	}
 
-	public int totalCost(int quantity, double cost){
-		return quantity * cost;
+	public double totalCost(int quantity, double cost){
+		return ((double)quantity * cost);
 	}
 
 //Mark: - Other Methods
+	@Override public String toString() {
+		String rtnStr = "id" + " " + id + "\n" +
+						"name" + " " + name + "\n" +
+						"quantity" + " " + quantity + "\n" +
+						"cost" + " " + cost + "\n" +
+						"vendingMachineId" + " " + vendingMachineId + "\n";
+		return rtnStr;
+	}
 
 }
