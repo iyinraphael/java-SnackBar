@@ -26,4 +26,10 @@ public class Customer
 	public double getCash() {
 		return cash;
 	}
+
+	public double setCash(double cost, int numberOfItem) {
+		double expense = cost * numberOfItem;
+		double newCash = this.cash - expense;
+		return this.cash = newCash;
+	}
 }

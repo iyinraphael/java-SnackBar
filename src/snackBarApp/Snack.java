@@ -36,8 +36,8 @@ public class Snack
 	public int getQuantity(){
 		return quantity;
 	}
-	public void setQuantity(int quantity){
-		this.quantity = quantity;
+	public int setQuantity(int quantity, int noOfItem){
+		return this.quantity = quantity - noOfItem;
 	}
 
 	public double getCost(){

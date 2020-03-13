@@ -19,6 +19,17 @@ public class Main
 		Snack snack4 = new Snack("Soda", 24, 2.50, vend2.getId());
 		Snack snack5 = new Snack("Water", 20, 2.75, vend2.getId());
 
+	
+		double cash1 = customer1.setCash(snack4.getCost(), 3);
+		double cash2 = customer1.setCash(snack3.getCost(), 1);
+		int quatity1 = snack4.setQuantity(snack4.getQuantity(), 3);
+		int quatity2 = snack3.setQuantity(snack3.getQuantity(), 1);
+
+		double cash3 = customer2.setCash(snack4.getCost(), 2);
+		int quantity3 = snack4.setQuantity(snack4.getQuantity(), 2);
+
+
+		
 		System.out.println("*** List of snacks");
 		System.out.println();
 		System.out.println(snack1);
@@ -26,6 +37,12 @@ public class Main
 		System.out.println(snack3);
 		System.out.println(snack4);
 		System.out.println(snack5);
+		System.out.println(cash1);
+		System.out.println(cash2);
+		System.out.println(cash3);
+		System.out.println(quatity1);
+		System.out.println(quatity2);
+		System.out.println(quantity3);
 
 	}
 }
